@@ -1,5 +1,4 @@
 <?php
-
 namespace Skonsoft\TranslatorBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -109,7 +108,6 @@ abstract class WordTranslationSuggestion
         return $this->rank;
     }
 
-
     /**
      * Set createdAt
      *
@@ -119,7 +117,7 @@ abstract class WordTranslationSuggestion
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
-    
+
         return $this;
     }
 
@@ -142,7 +140,7 @@ abstract class WordTranslationSuggestion
     public function setUpdatedAt($updatedAt)
     {
         $this->updatedAt = $updatedAt;
-    
+
         return $this;
     }
 
@@ -165,7 +163,7 @@ abstract class WordTranslationSuggestion
     public function setWordTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $wordTranslation = null)
     {
         $this->wordTranslation = $wordTranslation;
-    
+
         return $this;
     }
 
@@ -178,4 +176,5 @@ abstract class WordTranslationSuggestion
     {
         return $this->wordTranslation;
     }
+
 }

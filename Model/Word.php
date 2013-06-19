@@ -1,5 +1,4 @@
 <?php
-
 namespace Skonsoft\TranslatorBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -14,8 +13,8 @@ use \Doctrine\Common\Collections\ArrayCollection;
  * @ORM\Table(name="skonsoft_translator_word")
  * @Gedmo\TranslationEntity(class="\Skonsoft\TranslatorBundle\Model\WordTranslation")
  */
-abstract class Word {
-
+abstract class Word
+{
     /**
      * @var integer
      *
@@ -39,14 +38,16 @@ abstract class Word {
      *
      * @return integer 
      */
-    public function getId() {
+    public function getId()
+    {
         return $this->id;
     }
 
     /**
      * Constructor
      */
-    public function __construct() {
+    public function __construct()
+    {
         $this->translations = new ArrayCollection();
     }
 
@@ -56,7 +57,8 @@ abstract class Word {
      * @param WordTranslation $translation
      * @return Keyword
      */
-    public function addTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation) {
+    public function addTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation)
+    {
         if (!$this->translations->contains($translation)) {
             $this->translations[] = $translation;
             $translation->setObject($this);
@@ -70,7 +72,8 @@ abstract class Word {
      *
      * @param WordTranslation $translation
      */
-    public function removeTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation) {
+    public function removeTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation)
+    {
         $this->translations->removeElement($translation);
     }
 
@@ -79,16 +82,20 @@ abstract class Word {
      *
      * @return \Doctrine\Common\Collections\ArrayCollection 
      */
-    public function getTranslations() {
+    public function getTranslations()
+    {
         return $this->translations;
     }
+
     /**
      * 
      * @param \Doctrine\Common\Collections\ArrayCollection $translations
-     * @return type
+     * @return \Skonsoft\TranslatorBundle\Model\Word
      */
-    public function setTranslations(\Doctrine\Common\Collections\ArrayCollection $translations) {
-        return $this->translations = $translations;
+    public function setTranslations(\Doctrine\Common\Collections\ArrayCollection $translations)
+    {
+        $this->translations = $translations;
+        return $this;
     }
 
 }
