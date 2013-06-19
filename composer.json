@@ -19,5 +19,5 @@
     "autoload": {
         "psr-0": { "Skonsoft\\TranslatorBundle": "" }
     },
-    "target-dir": "Skonsoft/Translator"
+    "target-dir": "Skonsoft/TranslatorBundle"
 }
