@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TranslatorBundle\Model;
+namespace Skonsoft\TranslatorBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Translatable\Entity\MappedSuperclass\AbstractPersonalTranslation;

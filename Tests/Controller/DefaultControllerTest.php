@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TranslatorBundle\Tests\Controller;
+namespace Skonsoft\TranslatorBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

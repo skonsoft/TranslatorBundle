@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TranslatorBundle\Controller;
+namespace Skonsoft\TranslatorBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

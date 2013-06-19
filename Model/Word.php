@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TranslatorBundle\Model;
+namespace Skonsoft\TranslatorBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -12,7 +12,7 @@ use \Doctrine\Common\Collections\ArrayCollection;
  *
  * @ORM\MappedSuperclass
  * @ORM\Table(name="skonsoft_translator_word")
- * @Gedmo\TranslationEntity(class="\Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation")
+ * @Gedmo\TranslationEntity(class="\Skonsoft\TranslatorBundle\Model\WordTranslation")
  */
 abstract class Word {
 
@@ -56,7 +56,7 @@ abstract class Word {
      * @param WordTranslation $translation
      * @return Keyword
      */
-    public function addTranslation(Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation $translation) {
+    public function addTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation) {
         if (!$this->translations->contains($translation)) {
             $this->translations[] = $translation;
             $translation->setObject($this);
@@ -70,7 +70,7 @@ abstract class Word {
      *
      * @param WordTranslation $translation
      */
-    public function removeTranslation(Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation $translation) {
+    public function removeTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $translation) {
         $this->translations->removeElement($translation);
     }
 

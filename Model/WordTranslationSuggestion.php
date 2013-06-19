@@ -1,6 +1,6 @@
 <?php
 
-namespace Skonsoft\Bundle\TranslatorBundle\Model;
+namespace Skonsoft\TranslatorBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -159,10 +159,10 @@ abstract class WordTranslationSuggestion
     /**
      * Set keywordTranslation
      *
-     * @param Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation $wordTranslation
+     * @param Skonsoft\TranslatorBundle\Model\WordTranslation $wordTranslation
      * @return wordTranslationSuggestion
      */
-    public function setWordTranslation(Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation $wordTranslation = null)
+    public function setWordTranslation(Skonsoft\TranslatorBundle\Model\WordTranslation $wordTranslation = null)
     {
         $this->wordTranslation = $wordTranslation;
     
@@ -172,7 +172,7 @@ abstract class WordTranslationSuggestion
     /**
      * Get keywordTranslation
      *
-     * @return Skonsoft\Bundle\TranslatorBundle\Model\WordTranslation 
+     * @return Skonsoft\TranslatorBundle\Model\WordTranslation 
      */
     public function getWordTranslation()
     {
