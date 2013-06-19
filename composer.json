@@ -1,0 +1,23 @@
+{
+    "name": "skonsoft/translator-bundle",
+    "type": "symfony-bundle",
+    "description": "Translator bundle providing multilingual machine-translation service to translate written text from one language into another",
+    "keywords": ["translator", "skonsoft", "translate", "dictionnary"],
+    "homepage": "https://github.com/skonsoft/TranslatorBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Skander MABROUK",
+            "email": "mabroukskander@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle" : ">=2.1,<2.4",
+        "gedmo/doctrine-extensions": "*"
+    },
+    "autoload": {
+        "psr-0": { "Skonsoft\\TranslatorBundle": "" }
+    },
+    "target-dir": "Skonsoft/Translator"
+}
